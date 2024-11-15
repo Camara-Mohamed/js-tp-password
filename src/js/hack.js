@@ -1,4 +1,4 @@
 (function () {
-  var toto = "kjkljskl";
+    var toto = "kjkljskl";
 })();
 
