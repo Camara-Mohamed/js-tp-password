@@ -1,14 +1,22 @@
-const clicElement = document.querySelector('.showPass');
-const element = document.querySelector('input');
+(function () {
+    const hidePassword = {
+        buttonHiddenElement: document.querySelector('.showPass'),
+        inputElement: document.querySelector('input'),
 
-function changerInput() {
-    if (element.getAttribute('type') === 'password') {
-        element.setAttribute('type', 'text');
-    } else {
-        element.setAttribute('type', 'password');
+        init() {
+            if (this.inputElement.getAttribute('type') === 'password') {
+                this.inputElement.setAttribute('type', 'text');
+            } else {
+                this.inputElement.setAttribute('type', 'password');
+            }
+        },
+
+        addEventListener() {
+            this.buttonHiddenElement.addEventListener('click', () => {
+                this.init();
+            });
+        }
     }
-}
 
-clicElement.addEventListener('click', function () {
-    changerInput();
-});
+    hidePassword.addEventListener();
+})()
